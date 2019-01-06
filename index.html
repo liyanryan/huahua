@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <title>李闫</title>
+  <link rel="stylesheet" type="text/css" href="css/live.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+  <script type="text/javascript" src="js/jquery.min.1.7.js"></script>
+  <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/basic.css" />
+  <link rel="stylesheet" type="text/css" href="css/arrow.css" />
+  <style type="text/css">
+    body {
+      background: #dddddd url(ke01_img/background.png) repeat;
+    }
+
+    .loadinner {
+      position: absolute;
+      width: 76%;
+      height: 100%;
+      margin-left: -38%;
+      left: 50%;
+      text-align: center;
+      font-size: 11px;
+      line-height: 20px;
+    }
+
+    .graph {
+      background: #6c6c6c;
+      width: 70%;
+      margin: 10px auto 0 auto;
+    }
+
+    #bar {
+      display: block;
+      background: #f1f1f1;
+      height: 3px;
+      width: 10px;
+    }
+
+    #diary {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    #chupin {
+      width: 100%;
+      position: absolute;
+      bottom: 80px;
+    }
+
+    #cpright {
+      position: absolute;
+      bottom: 50px;
+      color: #757575;
+      font-size: 9px;
+      text-align: center;
+      width: 100%;
+      letter-spacing: -1px;
+      word-spacing: -1px;
+    }
+
+    .fanye {
+      display: none;
+      background: url(ke01_img/fanye.png) center top no-repeat;
+      background-size: cover;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 15%;
+      width: 100%;
+      color: #fff;
+      line-height: 15%;
+      font-size: 24px;
+    }
+
+    .fanye span {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      left: 0;
+    }
+
+    .weixin_layout {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: url(ke01_img/weinxin_share.png) no-repeat right top rgba(0, 0, 0, 0.6);
+      -webkit-background-size: 320px 150px;
+      -moz-background-size: 320px 150px;
+      -o-background-size: 320px 150px;
+      background-size: 320px 150px;
+      z-index: 999999;
+    }
+
+    #btns {
+      position: absolute;
+      left: 50%;
+      top: 15%;
+      width: 44%;
+      margin: 0 0 0 -22%;
+      z-index: 999;
+    }
+
+    #btns button,
+    #btns a {
+      line-height: 36px;
+      background: #1ea5d2;
+      border: 1px solid #fcfcfc;
+      color: #404040;
+      width: 100%;
+      height: 36px;
+      font-size: 17px;
+      font-family: "΢���ź�";
+      display: block;
+      text-decoration: none;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loading" style="background:#dddddd;">
+    <audio  autoplay="autoplay">
+      <source src="../demo1125/Walk Away.mp3" type="audio/ogg" />
+      <source src="../demo1125/Walk Away.mp3" type="audio/mpeg" />
+  
+    </audio>
+  
+    <div class="loadinner">
+      <div style="margin-top:60%;text-align:center;"><img id="diary" src="images/gai.jpg" /></div>
+      <div class="graph">
+        <strong id="bar"></strong>
+      </div>
+      <div style="color:#b4b4b4;">李闫的每一天</div>
+      <div><img id="chupin" src="images/112504702.png" /></div>
+     
+    </div>
+  </div>
+  <div class="flipbook-viewport" style="display:none;">
+    <div class="container">
+
+      <div class="flipbook">
+        <div style="background:url(ke01_img/0.jpg) center top no-repeat;background-size:100%">
+        </div>
+
+        <div style="background:url(ke01_img/112504538.jpg) center top no-repeat;background-size:100%">
+        </div>
+
+        <div style="background:url(ke01_img/1.jpg) center top no-repeat;background-size:100%">
+          <div class="fanye"><span>01/10</span></div>
+        </div>
+        <div style="background:url(ke01_img/2.jpg) center top no-repeat;background-size:100%">
+          <div class="fanye"><span>02/10</span></div>
+        </div>
+        <div style="background:url(ke01_img/112504530.jpg) center top no-repeat;background-size:100%">
+          <div class="fanye"><span>03/10</span></div>
+        </div>
+        <div id="fth" style="background:url(ke01_img/4.jpg) center top no-repeat;background-size:100%">
+          <div class="fanye"><span>04/10</span></div>
+        </div>
+        <div style="background:url(ke01_img/5.jpg) center top no-repeat;background-size:100%">
+          <div class="fanye"><span>05/10</span></div>
+        </div>
+        <div style="background:url(ke01_img/112504533.jpg) center top no-repeat;background-size:100%">
+          <div class="fanye"><span>06/10</span></div>
+        </div>
+        <div id="sevth" style="background:url(ke01_img/7.jpg) center top no-repeat;background-size:100%">
+          <div class="fanye"><span>07/10</span></div>
+        </div>
+        <div id="tenth" style="background:url(ke01_img/112504535.jpg) center top no-repeat;background-size:100%">
+          <div class="fanye"><span>8/10</span></div>
+        </div>
+        <div style="background:url(ke01_img/112504477.jpg) center top no-repeat;background-size:100%">
+          <div class="fanye"><span>9/10</span></div>
+        </div>
+
+        <div id="last" style="background:url(ke01_img/zuihou.jpg) center top no-repeat;background-size:100%">
+          <div class="fanye"><span>10/10</span></div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script language="javascript" src="js/ping.js"></script>
+  <script>
+    if (window['ARTICLE_INFO'] && window['ARTICLE_INFO']['catalog_full']) {
+      function newPgvDetail() {
+        var catalogPathR1 = ARTICLE_INFO.catalog_full.toString().replace(/-/g, ".");
+        var catalogPath = catalogPathR1.toString().replace(/_/g, "-");
+        if (ARTICLE_INFO.topic.name.length > 0) {
+          var L = "L.",
+            Z = "Z." + catalogPath + "." + ARTICLE_INFO.topic.name;
+        } else {
+          var L = "L." + catalogPath,
+            Z = "Z.";
+        }
+        var W = "W." + ARTICLE_INFO.type,
+          M = "M." + ARTICLE_INFO.tpl.type + ARTICLE_INFO.tpl.stype,
+          P = "P." + ARTICLE_INFO.site.toString().replace(/_/g, "-"),
+          pgvInfo = L + "_" + Z + "_" + W + "_" + M + "_" + P;
+        if (typeof (pgvMain) == 'function') {
+          if (typeof (pgvInfo) != 'undefined') {
+            pgvMain({
+              pgUserType: pgvInfo
+            });
+          }
+        }
+      }
+      newPgvDetail();
+    } else if (typeof (pgvMain) == 'function') {
+      if (typeof (whatCatalog) != 'undefined') {
+        pvCSTM = whatCatalog;
+        pgvMain();
+      } else {
+        pgvMain();
+      }
+    }
+  </script>
+  <script>
+    $('#bar').animate({
+      width: "100px"
+    });
+  </script>
+  <script type="text/javascript">
+    $(function progressbar() {
+      var w = $(".graph").width();
+      setTimeout(function () {
+        $('#bar').animate({
+          width: w
+        });
+      }, 500);
+      setTimeout(function () {
+        $(".flipbook-viewport").show();
+      }, 1000);
+    });
+
+    $(window).on('scroll.elasticity', function (e) {
+      e.preventDefault();
+    }).on('touchmove.elasticity', function (e) {
+      e.preventDefault();
+    });
+
+    function loadApp() {
+      var w = $(window).width();
+      var h = $(window).height();
+      $('.flipboox').width(w).height(h);
+      $(window).resize(function () {
+        w = $(window).width();
+        h = $(window).height();
+        $('.flipboox').width(w).height(h);
+      });
+
+      $('.flipbook').turn({
+
+        width: w,
+
+        height: h,
+
+        elevation: 50,
+        display: 'single',
+
+        gradients: true,
+
+        autoCenter: true
+      });
+    }
+
+    yepnope({
+      test: Modernizr.csstransforms,
+      yep: ['http://mat1.gtimg.com/ent/limeizhang/fanrenriji/js/turn.js'],
+      nope: ['http://mat1.gtimg.com/ent/limeizhang/fanrenriji/js/turn.html4.min.js'],
+      complete: loadApp
+    });
+  </script>
+
+  <style>
+    .flipbook .page {
+      background-position: center -70px !important;
+      background-repeat: no-repeat !important;
+      background-size: 100% !important;
+    }
+  </style>
+</body>
+
+</html>
